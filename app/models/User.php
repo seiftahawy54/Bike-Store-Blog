@@ -132,6 +132,25 @@
         return true;
       }
     }
+
+    public function addPayment($data) {
+      $this->db->query('INSERT INTO payment(username, visaNumber, pin, money) VALUES(:username, :visa, :pin, :money)');
+      $this->db->bind(':username', $data['username']);
+      $this->db->bind(':visa', $data['visaNum']);
+      $this->db->bind(':pin', $data['pin']);
+      $this->db->bind(':money', $data['money']);
+      if ($this->db->execute()) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    public function allPayment($username) {
+      $this->db->query('SELECT * FROM payment WHERE username = :username');
+      $this->db->bind(':username', $username);
+      return $this->db->resultSet();
+    }
     
 
   }

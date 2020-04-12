@@ -44,6 +44,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo URLROOT ?>/users/edit">Setting</a>
+            <a class="dropdown-item" href="<?php echo URLROOT ?>/users/payment">Payment</a>
             <a class="dropdown-item" href="<?php echo URLROOT ?>/users/service">Service</a>
             <a class="dropdown-item" href="#">Add Item</a>
             <a class="dropdown-item" href="#">Add Post</a>
